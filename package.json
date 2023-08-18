@@ -1,0 +1,49 @@
+{
+	"name": "nft-parser",
+	"version": "1.0.0",
+	"description": "Service collects events from blockchain",
+	"main": "src/app.ts",
+	"scripts": {
+		"dev": "nodemon --config nodemon.json src/app.ts dotenv_config_path=env/.env.base",
+		"start": "node src/app.js dotenv_config_path=.env.base",
+		"build": "tsc",
+		"lint": "eslint . --ext .ts"
+	},
+	"dependencies": {
+		"ansi-colors": "^4.1.1",
+		"axios": "^0.26.0",
+		"cli-progress": "^3.10.0",
+		"consola": "^2.15.3",
+		"dayjs": "^1.10.7",
+		"dotenv": "^10.0.0",
+		"lodash": "^4.17.21",
+		"moralis": "^1.5.4",
+		"node-cron": "^3.0.0",
+		"pg": "^8.7.3",
+		"pg-format": "^1.0.4",
+		"pg-promise": "^10.11.1",
+		"qs": "^6.10.3",
+		"web3": "3.0.0-rc.5"
+	},
+	"devDependencies": {
+		"@types/body-parser": "^1.19.0",
+		"@types/cli-progress": "^3.9.2",
+		"@types/config": "^0.0.38",
+		"@types/lodash": "^4.14.168",
+		"@types/node-cron": "^3.0.1",
+		"@types/pg": "^8.6.5",
+		"@types/pg-format": "^1.0.2",
+		"@types/qs": "^6.9.7",
+		"@typescript-eslint/eslint-plugin": "^5.4.0",
+		"@typescript-eslint/parser": "^5.4.0",
+		"eslint": "8.3.0",
+		"eslint-config-prettier": "^6.1.0",
+		"eslint-friendly-formatter": "^4.0.1",
+		"eslint-loader": "^4.0.2",
+		"eslint-plugin-prettier": "^3.1.0",
+		"nodemon": "^2.0.7",
+		"prettier": "^1.18.2",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4"
+	}
+}

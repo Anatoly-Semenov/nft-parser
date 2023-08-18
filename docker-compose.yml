@@ -1,0 +1,29 @@
+version: "3"
+services:
+  sg-collect-service-prod-transactions-bsc:
+    container_name: sg-collect-service-prod-transactions-bsc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      COLLECT_TYPE: transactions
+      PROVIDER_URL: https://misty-quiet-smoke.bsc.quiknode.pro/a6898e74758e97a47d35eabb2a57e20d725db736/
+      CRYPTO_NETWORK: bsc
+    networks:
+      - sg-network
+
+  sg-collect-service-prod-transactions-polygon:
+    container_name: sg-collect-service-prod-transactions-polygon
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      COLLECT_TYPE: transactions
+      PROVIDER_URL: https://crimson-fragrant-bush.matic.quiknode.pro/d7ecbf281b295d11f8c6e59abd47d02069d5e7b8/
+      CRYPTO_NETWORK: polygon
+    networks:
+      - sg-network
+
+networks:
+  sg-network:
+    external: true
