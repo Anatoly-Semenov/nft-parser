@@ -1,0 +1,9 @@
+{
+	"restartable": "rs",
+	"ignore": ["node_modules/", "dist/", ".idea", ".git", ".vscode", ".DS_Store"],
+	"watch": ["src/"],
+	"execMap": {
+		"ts": "node -r ts-node/register"
+	},
+	"ext": "js,json,ts"
+}
